@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #06323f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 564px;
+  height: 423px;
+  background-color: blanchedalmond;
+}
+
+.left {
+    width: 100px;
+    height: 400px;
+    background-color: #ffde00;
+}
