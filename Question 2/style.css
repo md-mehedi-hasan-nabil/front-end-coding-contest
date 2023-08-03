@@ -13,6 +13,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+img {
+  max-width: 100%;
+}
+
 .container {
   width: 100%;
   max-width: 1280px;
@@ -89,11 +93,37 @@ nav .menu li a:hover {
   display: none;
 }
 
-.mobile-nav {
-  display: none;
-}
 .navbar-collapse {
   display: block;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.hero .save-money {
+  color: #e9dcff;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+}
+
+@media (max-width: 800px) {
+  nav .navbar-collapse .menu {
+    gap: 2rem;
+  }
+  nav .navbar-collapse .menu li a {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -108,29 +138,34 @@ nav .menu li a:hover {
   .signup {
     display: block;
   }
-  nav .navbar-collapse {
+  nav .navbar-collapse.responsive {
     position: absolute;
     width: 100%;
     display: block;
     background: #0e0e0e;
     height: 100vh;
-    top: 0;
+    top: 6rem;
     left: 0;
+  }
+  nav .navbar-collapse.responsive .menu li a {
+    display: block;
+    width: 100%;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+  }
+  nav .navbar-collapse.responsive .menu li a:hover {
+    background-color: #e9dcff;
+    color: #333333;
+  }
+  nav .navbar-collapse {
+    display: none;
   }
   nav .menu {
     display: block;
   }
 
-  nav .mobile-nav {
-    display: flex;
+  .hero {
+    flex-direction: column;
   }
-}
-
-.side-menu {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: red;
 }
